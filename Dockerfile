@@ -3,7 +3,7 @@ FROM php:7.3.23-fpm-alpine
 LABEL maintainer='Yansell Rivas <yansellrivasdiaz@gmail.com>'
 
  # Install dependencies
- RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev libjpeg-turbo-dev nano bash gzip && \
+ RUN apk add --no-cache freetype libpng libjpeg-turbo freetype-dev libpng-dev libjpeg-turbo-dev nano bash gzip make && \
   docker-php-ext-configure gd \
     --with-gd \
     --with-freetype-dir=/usr/include/ \
